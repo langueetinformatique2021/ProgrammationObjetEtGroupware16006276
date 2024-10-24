@@ -2,7 +2,7 @@ package atelier02;
 
 
 /**B contient la méthode 'divise' retournant la moitier d'un entier si A.treize return true
- * reuturn l'entier +2 dans le cas contraire)
+ * reuturn l'entier +2 dans le de 'false')
  */
 public class B
 {
