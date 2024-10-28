@@ -1,4 +1,4 @@
-package atelier02;
+package avant atelier4;
 
 
 /**A contient la méthode treize retournant la valeur 'true' si un parametre entier 'n' est
