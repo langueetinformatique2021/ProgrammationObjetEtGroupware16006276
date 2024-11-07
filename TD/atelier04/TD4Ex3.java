@@ -1,6 +1,6 @@
 package atelier02;{
 
-public classTD4Ex4 { 
+public classTD4Ex3 { 
 	public static void main(String[] args) {
 	String[] prenon = {"Chistian", "Karen", "Victoria", "Agatha", "Philippe", "Djamé"};
 	int imin=0;
