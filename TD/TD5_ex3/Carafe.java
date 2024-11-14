@@ -1,30 +1,41 @@
+package TD05;
+
 public class Carafe {
-	private int cont;
-	private int cap;
-
-public Carafe(int cap) {
-		this.cap = cap;
-		this.cont = 0;
-	
+	//Atributs privés de la class
+	private int contenu_;
+	private int capacité_;
+	/**
+	 * Constructeur
+	 * @param Carafe initialment vide
+	 */
+	public Carafe(int capacité) {
+		this.capacité_ = capacité;
+		this.contenu_ = 0;
 	}
-public void rempl() {
-    this.cont = this.cap; 
+	//@return le contenu
+	public int Contenu() {
+		return this.contenu_;
+	}
+	//@return la capacité
+	public int Capacité() {
+		return this.capacité_;
+	}
+	//Méthode pour remplir
+	public void Remplir() {
+		contenu_ = capacité_;
+	}
+	//Méthode pour vider
+	public void Vider() {
+		contenu_ = 0;
+	}
+	/**
+	 * 
+	 * @param autreCarafe la carafe qui recoit l'action de transverser
+	 */
+	public void Transvaser(Carafe autreCarafe) {
+		int Transversable = Math.min(this.contenu_, autreCarafe.capacité_ - autreCarafe.contenu_);
+		this.contenu_ -= Transversable;
+		autreCarafe.contenu_ += Transversable;
+	}
+		
 }
-public void vide() {
-    this.cont = 0; // 
-}
-
-
-public int getContenu() { 
-	return this.cont;
-}
-
-public int getCapacite() { 
-	return this.cap;
-}
-
-
-public void transvaserDans(Carafe autreCarafe) {
-		int quantiteTransvasable = Math.min(this.cont, autreCarafe.cap - autreCarafe.cont); 
-		this.cont -= quantiteTransvasable; 
-		autreCarafe.cont += quantiteTransvasable; } }
